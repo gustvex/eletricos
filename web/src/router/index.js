@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 
 import HomeView from '../views/HomeView.vue'
 import { setPageMeta } from '../utils/seo.js'
@@ -33,8 +33,18 @@ const routes = [
   },
 ]
 
+/**
+ * Hospedagem estatica sem reescrita de rota (GitHub Pages, um link de
+ * preview, um bucket simples) devolve 404 ao abrir /orcamento direto.
+ * Nesses casos o build roda com VITE_ROUTER_MODE=hash e a rota vira
+ * /#/orcamento, que qualquer host serve. Em servidor proprio (Node, Vercel,
+ * Netlify) fica a URL limpa.
+ */
+const history =
+  import.meta.env.VITE_ROUTER_MODE === 'hash' ? createWebHashHistory() : createWebHistory()
+
 export const router = createRouter({
-  history: createWebHistory(),
+  history,
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
