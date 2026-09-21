@@ -1,0 +1,38 @@
+# deps
+node_modules/
+.pnp
+.pnp.js
+
+# build
+dist/
+dist-ssr/
+*.local
+
+# env
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# dados de leads gerados em runtime
+server/data/
+*.jsonl
+
+# editor / SO
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

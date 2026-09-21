@@ -1,0 +1,101 @@
+/**
+ * Design tokens.
+ * A paleta sai do cartao de visita: vermelho forte, preto e branco.
+ * O verde entra so nas acoes de WhatsApp, porque no Brasil o verde do
+ * WhatsApp ja e lido como "fale comigo agora" e converte melhor que um
+ * botao neutro.
+ */
+:root {
+  /* --- marca --- */
+  --red-50: #fff1f1;
+  --red-100: #ffe0e1;
+  --red-200: #ffc5c7;
+  --red-400: #f4474f;
+  --red-500: #dc1c24; /* vermelho do cartao */
+  --red-600: #c2151d;
+  --red-700: #9c1016;
+
+  --ink-900: #0d0d0f; /* preto do bloco do cartao */
+  --ink-800: #16161a;
+  --ink-700: #23232a;
+  --ink-600: #3a3a44;
+  --ink-500: #5c5c68;
+  --ink-400: #8a8a95;
+  --ink-300: #c2c2cb;
+  --ink-200: #e2e2e8;
+  --ink-100: #f0f0f3;
+  --ink-50: #f7f7f9;
+  --white: #ffffff;
+
+  --whats-500: #25d366;
+  --whats-600: #1eb85a;
+  --whats-700: #128c7e;
+
+  --amber-500: #f5a524;
+
+  /* --- papeis semanticos --- */
+  --bg: var(--white);
+  --bg-soft: var(--ink-50);
+  --bg-dark: var(--ink-900);
+  --surface: var(--white);
+  --border: var(--ink-200);
+  --border-strong: var(--ink-300);
+
+  --text: var(--ink-900);
+  --text-muted: var(--ink-500);
+  --text-inverse: var(--white);
+  --text-inverse-muted: #b6b6c0;
+
+  --brand: var(--red-500);
+  --brand-hover: var(--red-600);
+  --brand-contrast: var(--white);
+
+  /* --- tipografia --- */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --step--1: clamp(0.82rem, 0.79rem + 0.15vw, 0.89rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.06rem);
+  --step-1: clamp(1.2rem, 1.12rem + 0.4vw, 1.4rem);
+  --step-2: clamp(1.45rem, 1.3rem + 0.75vw, 1.85rem);
+  --step-3: clamp(1.75rem, 1.5rem + 1.25vw, 2.5rem);
+  --step-4: clamp(2.1rem, 1.6rem + 2.4vw, 3.5rem);
+
+  /* --- espacamento --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  --container: 1140px;
+  --container-narrow: 760px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+
+  /* --- formas --- */
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgb(13 13 15 / 6%), 0 1px 3px rgb(13 13 15 / 6%);
+  --shadow: 0 6px 16px rgb(13 13 15 / 8%), 0 2px 4px rgb(13 13 15 / 4%);
+  --shadow-lg: 0 18px 40px rgb(13 13 15 / 14%), 0 4px 10px rgb(13 13 15 / 6%);
+  --shadow-brand: 0 10px 28px rgb(220 28 36 / 26%);
+  --shadow-whats: 0 10px 28px rgb(37 211 102 / 32%);
+
+  --ring: 0 0 0 3px rgb(220 28 36 / 35%);
+
+  --transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  --header-height: 68px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition: 0ms;
+  }
+}

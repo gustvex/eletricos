@@ -1,0 +1,101 @@
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.section {
+  padding-block: clamp(3rem, 8vw, 5.5rem);
+}
+
+.section--soft {
+  background: var(--bg-soft);
+}
+
+.section--dark {
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+}
+
+.section--dark p {
+  color: var(--text-inverse-muted);
+}
+
+/* Acessibilidade: visivel so para leitores de tela. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-4);
+  top: -100px;
+  z-index: 200;
+  padding: var(--space-3) var(--space-4);
+  background: var(--brand);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  text-decoration: none;
+  transition: top var(--transition);
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+.stack > * + * {
+  margin-top: var(--space-4);
+}
+
+/* minmax(0, 1fr): impede que um filho com conteudo longo (min-width: auto)
+   estique a coluna e crie scroll horizontal no celular. */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 26px;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--brand);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}

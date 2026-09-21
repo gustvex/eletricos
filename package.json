@@ -1,0 +1,24 @@
+{
+  "name": "eletricos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site de captacao de orcamentos para oficina de bikes, patinetes e scooters eletricas",
+  "workspaces": [
+    "shared",
+    "web",
+    "server"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "dev": "npm run dev --workspace=web",
+    "dev:api": "npm run dev --workspace=server",
+    "build": "npm run build --workspace=web",
+    "preview": "npm run preview --workspace=web",
+    "start": "npm run start --workspace=server",
+    "lint": "npm run lint --workspace=web",
+    "test": "npm run test --workspace=shared && npm run test --workspace=server",
+    "test:e2e": "node scripts/e2e.mjs"
+  }
+}
