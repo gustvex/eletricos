@@ -83,7 +83,7 @@ export const business = {
   },
 
   /** Dominio final do site. Usado nas tags canonical/Open Graph. */
-  siteUrl: 'https://mouraeletricos.com.br',
+  siteUrl: 'https://www.mouraeletricos.com.br',
 }
 
 export default business
