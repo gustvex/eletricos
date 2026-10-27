@@ -8,9 +8,9 @@
 
 export const business = {
   /** Nome curto usado no logo e no titulo das paginas. */
-  name: 'Elétricos',
+  name: 'Moura Elétricos',
   /** Nome completo usado no SEO e no JSON-LD. */
-  legalName: 'Elétricos — Manutenção de Bikes, Patinetes e Scooters Elétricas',
+  legalName: 'Moura Elétricos — Manutenção de Bikes, Patinetes e Scooters Elétricas',
   /** Como o cliente chama o responsavel na conversa do WhatsApp. */
   owner: 'Guilherme',
   tagline: 'Problemas com sua bike, patinete ou scooter elétrica? Nós resolvemos.',

@@ -9,7 +9,7 @@ const routes = [
     name: 'home',
     component: HomeView,
     meta: {
-      title: 'Conserto de Bike, Patinete e Scooter Elétrica | Elétricos',
+      title: 'Conserto de Bike, Patinete e Scooter Elétrica | Moura Elétricos',
       description:
         'Oficina especializada em bicicleta elétrica, patinete elétrico e scooter elétrica. Diagnóstico gratuito, orçamento na hora pelo WhatsApp e garantia no serviço.',
     },
@@ -20,7 +20,7 @@ const routes = [
     // Carregado sob demanda: a home abre mais leve no 4G.
     component: () => import('../views/QuoteView.vue'),
     meta: {
-      title: 'Orçamento rápido pelo WhatsApp | Elétricos',
+      title: 'Orçamento rápido pelo WhatsApp | Moura Elétricos',
       description:
         'Responda 4 perguntas e receba o orçamento do conserto da sua bike, patinete ou scooter elétrica direto no WhatsApp.',
     },
@@ -29,7 +29,7 @@ const routes = [
     path: '/:pathMatch(.*)*',
     name: 'nao-encontrado',
     component: () => import('../views/NotFoundView.vue'),
-    meta: { title: 'Página não encontrada | Elétricos' },
+    meta: { title: 'Página não encontrada | Moura Elétricos' },
   },
 ]
 
